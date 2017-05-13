@@ -2,14 +2,17 @@ alias tree='tree -C'
 alias path='echo -e ${PATH//:/\\n}'
 
 # Puppet aliases
-alias puppet-lint='puppet-lint --log-format="%{path} - %{KIND}:%{check} - %{message} on line %{line}"'
-alias izgood="puppet parser validate"
-alias izpretty='puppet-lint'
+alias plintl='puppet-lint --log-format="%{path} - %{KIND}:%{check} - %{message} on line %{line}"'
+alias ppv="puppet parser validate"
+alias plint='puppet-lint'
 
 # Vagrant aliases
 alias v='vagrant'
 alias vs='vagrant status'
 alias vhl='vagrant hosts list'
+alias vscp='vaagrant scp'
+alias vsl='vagrant snapshot list'
+alias vst='vagrant snapshot take'
 
 # Tmux aliases
 alias tma='tmux attach -d -t'

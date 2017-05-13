@@ -26,7 +26,7 @@ brew install gnu-sed --with-default-names
 brew install vim --with-override-system-vi
 
 # Install other useful tools
-brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget
+brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh
 
 # Use homebrew's Ruby rather than system ruby.
 # This lets you install gems without needing sudo/root
