@@ -6,7 +6,7 @@ I use [Homesick](https://github.com/technicalpickles/homesick) to manage my dotf
 
 ### Homebrew
 
-1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Bettervim: `brew install vim --with-override-system-vi`
 1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh`
 1. Use brew's Ruby: `brew install ruby ruby-build`
