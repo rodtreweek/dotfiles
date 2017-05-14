@@ -24,6 +24,7 @@ I use [Homesick](https://github.com/technicalpickles/homesick) to manage my dotf
 1. Create the symlinks with `homesick symlink dotfiles`
 
 ### Vim plugins
+https://github.com/junegunn/vim-plug
 
 1. Vimplug Install: `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
