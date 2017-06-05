@@ -32,7 +32,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/Wombat'
 Plug 'scrooloose/nerdtree'
-Plug 'vim-scripts/LustyExplorer'
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'Shougo/neocomplete'
@@ -48,9 +47,8 @@ Plug 'godlygeek/tabular'
 Plug 'morhetz/gruvbox'
 Plug 'PProvost/vim-ps1'
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe'
 Plug 'voxpupuli/vim-puppet'
-Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " -- Display
