@@ -37,7 +37,7 @@ call plug#end() to update &runtimepath and initialize plugin system
 Automatically executes filetype plugin indent on and syntax enable. You can revert the settings after the call. e.g. filetype indent off, syntax off, etc.
 1. Setup YouCompleteMe:
     1. `brew install cmake`
-    1. `~/.vim/bundle/YouCompleteMe/install.py`
+    1. `~/.vim/plugged/YouCompleteMe/install.py`
 
 ### Fonts
 
