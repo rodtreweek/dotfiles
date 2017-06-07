@@ -11,18 +11,18 @@ let g:ctrlp_map = '<leader>c'
 
 " Add a mark and search
 nmap <leader>j mA:Ack<space>
-" Add a mark and search for the word under the cursor 
-nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>" 
+" Add a mark and search for the word under the cursor
+nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
 nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
 
 " Disabling the directional keys
 map <up> <nop>
-map <down> <nop> 
-map <left> <nop> 
-map <right> <nop> 
-imap <up> <nop> 
-imap <down> <nop> 
-imap <left> <nop> 
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
 imap <right> <nop>
 
 " Press the j 2 times in a row
@@ -31,24 +31,15 @@ imap <right> <nop>
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-scripts/Wombat'
-Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'Shougo/neocomplete'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/ctags.vim'
-Plug 'avakhov/vim-yaml'
-Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
-Plug 'dearrrfish/vim-applescript'
-Plug 'gabrielelana/vim-markdown'
 Plug 'godlygeek/tabular'
-Plug 'morhetz/gruvbox'
-Plug 'PProvost/vim-ps1'
-Plug 'tpope/vim-fugitive'
 Plug 'voxpupuli/vim-puppet'
-Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " -- Display
