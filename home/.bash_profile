@@ -10,6 +10,9 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# fasd setup
+eval "$(fasd --init auto)"
+
 # Path to the bash it configuration
 export BASH_IT="/Users/rod/.bash_it"
 
