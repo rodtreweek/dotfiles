@@ -10,8 +10,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+# fasd setup
+eval "$(fasd --init auto)"
+
 # Path to the bash it configuration
-export BASH_IT="/Users/Hot_Rod/.bash_it"
+export BASH_IT="/Users/rod/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -62,7 +65,7 @@ export SCM_CHECK=true
 source "$BASH_IT"/bash_it.sh
 
 # Path to the bash it configuration
-export BASH_IT="/Users/Hot_Rod/.bash_it"
+export BASH_IT="/Users/rod/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
