@@ -16,7 +16,7 @@ I also highly recommend that you read this book if you use vim: https://github.c
 
 1. bash_it: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bash-it/bash-it/master/install.sh)"`
 1. `mkdir ~/src`
-1. `git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k`
+1. `git clone https://github.com/rodtreweek/powerline-r ~/src/powerline-r`
 
 ### Homesick
 
