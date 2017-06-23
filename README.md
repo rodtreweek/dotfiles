@@ -18,6 +18,13 @@ I also highly recommend that you read this book if you use vim: https://github.c
 1. `mkdir ~/src`
 1. `git clone https://github.com/rodtreweek/powerline-r ~/src/powerline-r`
 
+### Zsh
+
+oh-my-zsh: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mkdir ~/src
+git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
+
+
 ### Homesick
 
 1. Install Homesick with `gem install homesick`
