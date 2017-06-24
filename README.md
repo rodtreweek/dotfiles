@@ -24,6 +24,22 @@ oh-my-zsh: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh
 mkdir ~/src
 git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 
+## How to install antigen
+
+antigen is a plugin manager for zsh. Installing antigen is straightforward:
+
+cd ~ && git clone https://github.com/zsh-users/antigen.git .antigen 
+Then, edit your .zshrc file including
+
+source "$HOME/.antigen/antigen.zsh"
+
+antigen-use oh-my-zsh
+antigen-bundle arialdomartini/oh-my-git
+antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+
+antigen-apply
+When you restart zsh, antigen will download and install all that's needed.
+
 
 ### Homesick
 
