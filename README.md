@@ -11,7 +11,7 @@ I also highly recommend that you read this book if you use vim: https://github.c
 1. Bettervim: `brew install vim --with-override-system-vi`
 1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh`
 1. Use brew's Ruby: `brew install ruby ruby-build`
-1. Install X-clipt: first, `brew cask install xquartz` then: `brew install xclip`
+1. Install Xclip: first, `brew cask install xquartz` then: `brew install xclip`
 
 ### bash
 
