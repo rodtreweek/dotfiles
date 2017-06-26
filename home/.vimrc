@@ -1,13 +1,7 @@
-"Rod Treweek 
+"Rod Treweek
 
 " Activate the NERDTree when launching vim
 " autocmd vimenter * NERDTree
-
-" Default params for ack
-let g:ackprg="ack -H --nocolor --nogroup --column"
-
-" Default params for ctrlp
-let g:ctrlp_map = '<leader>c'
 
 " Add a mark and search
 nmap <leader>j mA:Ack<space>
@@ -28,18 +22,17 @@ imap <right> <nop>
 " Press the j 2 times in a row
 :imap jj <Esc>
 
+" Let vim-plug manage things
 call plug#begin('~/.vim/plugged')
-Plug 'altercation/vim-colors-solarized'
-Plug 'vim-scripts/Wombat'
-Plug 'mileszs/ack.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'Shougo/neocomplete'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
-Plug 'vim-scripts/ctags.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'godlygeek/tabular'
+Plug 'PProvost/vim-ps1'
+Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'godlygeek/tabular'
 Plug 'voxpupuli/vim-puppet'
+Plug 'w0rp/ale'
 call plug#end()
 
 " -- Display
@@ -73,7 +66,7 @@ set noerrorbells                  " Prevent Vim from beeping
 set hidden
 
 set background=dark
-colorscheme Wombat
+"colorscheme Wombat
 
 syntax on
 
