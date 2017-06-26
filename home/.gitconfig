@@ -1,0 +1,59 @@
+[user]
+  name = Rod Treweek
+  email = rod@puppet.com
+	signingkey = 0xF3826FFDBFEAFCEB
+
+[alias]
+  co        = checkout
+  ec        = config --global -e
+  cob       = checkout -b
+  cm        = !git add -A && git commit -m
+  hist      = log --pretty=format:'%C(dim cyan)%G?%C(reset) %C(yellow)%h%C(reset) - %C(green)(%cr)%C(reset) %C(bold white)%an%C(reset) %s %C(bold blue)%d%C(reset)' --graph --date-order
+  unstage   = reset HEAD --
+  cp        = cherry-pick
+  update    = pull --rebase
+  prune     = fetch --all --prune
+  stash-all = stash save --include-untracked
+  alias     = config --get-regexp ^alias\\.
+
+[push]
+  default = simple
+  followTags = true
+
+[color]
+  ui = auto
+
+[color "branch"]
+current = yellow reverse
+local = yellow
+remote = blue
+
+[color "diff"]
+meta = yellow bold
+frag = magenta bold
+old = white red
+new = green bold
+
+[color "status"]
+added = yellow
+changed = black magenta
+untracked = black cyan
+
+[core]
+  whitespace = trailing-space,space-before-tab
+  editor = vim
+
+[init]
+  templatedir = ~/.git_template
+
+[commit]
+  verbose = true
+	gpgsign = true
+
+[merge]
+  ff = only
+
+[fetch]
+  prune = true
+[gpg]
+	program = /usr/local/bin/gpg
