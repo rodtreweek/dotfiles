@@ -1,6 +1,6 @@
 # My dotfiles repo
 
-I use [Homesick](https://github.com/technicalpickles/homesick) to manage my dotfiles.
+I use Homeshick to manage my dotfiles.
 I also highly recommend that you read this book if you use vim: https://github.com/vjousse/vim-for-humans-book
 
 ## Installation
@@ -9,7 +9,7 @@ I also highly recommend that you read this book if you use vim: https://github.c
 
 1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Bettervim: `brew install vim --with-override-system-vi`
-1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh cmake`
+1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh homeshick cmake`
 1. Use brew's Ruby: `brew install ruby ruby-build`
 1. Install Xclip: first, `brew cask install xquartz` then: `brew install xclip`
 
@@ -26,11 +26,11 @@ mkdir ~/src
 git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 
 
-### Homesick
+### Homeshick
 
-1. Install Homesick with `gem install homesick`
-1. Clone this castle with `homesick clone rodtreweek/dotfiles`
-1. Create the symlinks with `homesick symlink dotfiles`
+1. Install Homeshick with `brew install homeshick`
+1. Clone this castle with `homeshick clone rodtreweek/dotfiles`
+1. Create the symlinks with `homeshick symlink dotfiles`
 
 ### Vim plugins
 https://github.com/junegunn/vim-plug
