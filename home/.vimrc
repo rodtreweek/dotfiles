@@ -26,7 +26,7 @@ imap <right> <nop>
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-theme'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-endwise'
 Plug 'stephpy/vim-yaml'
