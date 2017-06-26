@@ -2,6 +2,9 @@
 
 " Activate the NERDTree when launching vim
 " autocmd vimenter * NERDTree
+set nocompatible              " be iMproved, required
+filetype off                  " required
+filetype plugin indent on     " required
 
 " Add a mark and search
 nmap <leader>j mA:Ack<space>
@@ -18,9 +21,6 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
-
-" Press the j 2 times in a row
-:imap jj <Esc>
 
 " Let vim-plug manage things
 call plug#begin('~/.vim/plugged')
@@ -42,14 +42,34 @@ call plug#end()
 " -- Display
 " Enable syntax processing
 syntax enable
-filetype on
-filetype plugin on
-filetype indent on
-set title                         " Update the title of your window or your terminal
 set ruler                         " Show me a ruler
-set wrap                          " Wrap lines when they are too long
+
+" Make Vim to handle long lines nicely.
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
 set showcmd                       " Show command in bottom bar
-set nocursorline                  " Highlight current line
+set showmode                    " Show current mode.
+
+" mail line wrapping
+au BufRead /tmp/mutt-* set tw=72
+
+set noswapfile                  " Don't use swapfile
+set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
+
+set noshowmode                  " We show the mode with airline or lightline
+set incsearch                   " Shows the match while typing
+set hlsearch                    " Highlight found searches
+set ignorecase                  " Search case insensitive...
+set smartcase                   " ... but not when search pattern contains upper case characters
+set ttyfast
+" set ttyscroll=3               " noop on linux ?
+set lazyredraw          	      " Wait to redraw "
+
+" speed up syntax highlighting
+set nocursorcolumn
+set nocursorline
 set showmatch                     " Highlight matching parenthesis
 
 set backspace=indent,eol,start    " Sensible backspace behavior
@@ -94,5 +114,43 @@ au BufRead,BufNewFile *.pp
 au BufRead,BufNewFile *_spec.rb
   \ nmap <F8> :!rspec --color %<CR>
 
-" Enable indentation matching for =>'s
-filetype plugin indent on
+" Time out on key codes but not mappings.
+" Basically this makes terminal Vim work sanely.
+set notimeout
+set ttimeout
+set ttimeoutlen=10
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" trim all whitespaces away
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" dont save .netrwhist history
+let g:netrw_dirhistmax=0
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+" never do this again --> :set paste <ctrl-v> :set no paste
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+" set 80 character line limit
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+" =================== vim-airline ========================
+
+let g:airline_theme='luna'
+
+" set to use powerline fonts when not in a ssh session
+let g:remoteSession = ($STY == "")
+if !g:remoteSession
+  let g:airline_powerline_fonts=1
+endif
