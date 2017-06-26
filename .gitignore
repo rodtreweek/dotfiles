@@ -1,5 +1,6 @@
 home/.antigen/repos
 home/.grip/
+home/.vim/
 # rcov generated
 coverage
 
