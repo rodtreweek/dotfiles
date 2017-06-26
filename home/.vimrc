@@ -28,7 +28,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tpope/vim-endwise'
 Plug 'stephpy/vim-yaml'
 Plug 'godlygeek/tabular'
 Plug 'PProvost/vim-ps1'
@@ -50,10 +49,6 @@ set textwidth=79
 set formatoptions=qrn1
 
 set showcmd                       " Show command in bottom bar
-set showmode                    " Show current mode.
-
-" mail line wrapping
-au BufRead /tmp/mutt-* set tw=72
 
 set noswapfile                  " Don't use swapfile
 set fileformats=unix,dos,mac    " Prefer Unix over Windows over OS 9 formats
@@ -70,7 +65,6 @@ set lazyredraw          	      " Wait to redraw "
 " speed up syntax highlighting
 set nocursorcolumn
 set nocursorline
-set showmatch                     " Highlight matching parenthesis
 
 set backspace=indent,eol,start    " Sensible backspace behavior
 
@@ -118,11 +112,6 @@ au BufRead,BufNewFile *_spec.rb
 set notimeout
 set ttimeout
 set ttimeoutlen=10
-
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
 
 " trim all whitespaces away
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
