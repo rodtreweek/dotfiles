@@ -26,11 +26,11 @@ mkdir ~/src
 git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 
 
-### Homeshick
+### Homesick
 
-1. Install Homeshick with `brew install homeshick`
-1. Clone this castle with `homeshick clone rodtreweek/dotfiles`
-1. Create the symlinks with `homeshick symlink dotfiles`
+1. Install Homeshick with `gem install homesick`
+1. Clone this castle with `homesick clone rodtreweek/dotfiles`
+1. Create the symlinks with `homesick symlink dotfiles`
 
 ### Vim plugins
 https://github.com/junegunn/vim-plug
