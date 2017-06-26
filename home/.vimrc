@@ -90,7 +90,6 @@ set noerrorbells                  " Prevent Vim from beeping
 set hidden
 
 set background=dark
-"colorscheme Wombat
 
 syntax on
 
