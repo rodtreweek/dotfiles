@@ -135,7 +135,7 @@ endif
 
 " =================== vim-airline ========================
 
-let g:airline_theme='powerlineish'
+let g:airline_theme='base16-spacemacs'
 
 " set to use powerline fonts when not in a ssh session
 let g:remoteSession = ($STY == "")
