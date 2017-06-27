@@ -9,7 +9,7 @@ I also highly recommend that you read this book if you use vim: https://github.c
 
 1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Bettervim: `brew install vim --with-override-system-vi`
-1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh homeshick cmake`
+1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh cmake`
 1. Use brew's Ruby: `brew install ruby ruby-build`
 1. Install Xclip: first, `brew cask install xquartz` then: `brew install xclip`
 
