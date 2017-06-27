@@ -1,20 +1,7 @@
-# Use .bashrc
-
-export PS1="\W \$"
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-
-# Setup bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
-# fasd setup
-eval "$(fasd --init auto)"
+#!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="/Users/rod/.bash_it"
+export BASH_IT="/Users/Hot_Rod/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -23,6 +10,9 @@ export BASH_IT_THEME='powerline-multiline'
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
 # export BASH_IT_REMOTE='bash-it'
+
+# Your place for hosting Git repos. I use this for private repos.
+export GIT_HOSTING='git@git.domain.com'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
