@@ -1,6 +1,6 @@
 # My dotfiles repo
 
-![Travis CI](https://travis-ci.org/rodtreweek/dotfiles.svg?branch=master)](https://travis-ci.org/rodtreweek/dotfiles)
+[![Travis CI](https://travis-ci.org/rodtreweek/dotfiles.svg?branch=master)](https://travis-ci.org/rodtreweek/dotfiles)
 
 
 I use Homesick to manage my dotfiles.
