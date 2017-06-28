@@ -1,6 +1,6 @@
 # My dotfiles repo
 
-I use Homeshick to manage my dotfiles.
+I use Homesick to manage my dotfiles.
 I also highly recommend that you read this book if you use vim: https://github.com/vjousse/vim-for-humans-book
 
 ## Installation
