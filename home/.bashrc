@@ -145,18 +145,18 @@ function relup() {
   read old_release
   echo "Enter new release: "
   read new_release
-  find -E . -type f -regex "(.*pp)|(.*yaml)" -exec sed -i '' "s/$old_release/$new_release/" {} +
+  #find -E . -type f -regex "(.*pp)|(.*yaml)" -exec sed -i '' "s/$old_release/$new_release/" {} +
 }
 
 function relup_pdk() {
-  cd ~/rod_pdk
-  re='^[0-9]+$'
-  echo "Enter old release: "
-  read old_release
-  echo "Enter new release: "
-  read new_release
-  find -E . -type f -regex "(.*pp)|(.*yaml)" -exec sed -i '' "s/$old_release/$new_release/" {} +
-}
+    cd ~/rod_pdk
+    re='^[0-9]+$'
+    echo "Enter old release: "
+    read old_release
+    echo "Enter new release: "
+    read new_release
+    find -E . -type f -regex "(.*pp)|(.*yaml)" -exec sed -r -i'' -e "s/$old_release/$new_release/g" {} \;
+  }
 
 # I'm lazy
 function lzgit() {
