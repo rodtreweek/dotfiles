@@ -47,7 +47,7 @@ Automatically executes filetype plugin indent on and syntax enable. You can reve
     1. `brew install cmake`
     1. `~/.vim/plugged/YouCompleteMe/install.py`
 
-#### `.vim`
+#### .vim
 
 My `.vim` dotfiles are here:
 [github.com/rodtreweek/.vim](https://github.com/rodtreweek/.vim).
