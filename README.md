@@ -1,5 +1,8 @@
 # My dotfiles repo
 
+![Travis CI](https://travis-ci.org/rodtreweek/dotfiles.svg?branch=master)](https://travis-ci.org/rodtreweek/dotfiles)
+
+
 I use Homesick to manage my dotfiles.
 I also highly recommend that you read this book if you use vim: https://github.com/vjousse/vim-for-humans-book
 
