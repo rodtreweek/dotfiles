@@ -10,9 +10,6 @@ alias ppv="puppet parser validate"
 alias plint='puppet-lint'
 
 # Vagrant aliases
-alias v='vagrant'
-alias vs='vagrant status'
-alias vhl='vagrant hosts list'
 alias vscp='vaagrant scp'
 alias vsl='vagrant snapshot list'
 alias vst='vagrant snapshot take'
