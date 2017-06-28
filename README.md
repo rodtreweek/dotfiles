@@ -28,7 +28,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 
 ### Homesick
 
-1. Install Homeshick with `gem install homesick`
+1. Install Homesick with `gem install homesick`
 1. Clone this castle with `homesick clone rodtreweek/dotfiles`
 1. Create the symlinks with `homesick symlink dotfiles`
 
@@ -46,6 +46,12 @@ Automatically executes filetype plugin indent on and syntax enable. You can reve
 1. Setup YouCompleteMe:
     1. `brew install cmake`
     1. `~/.vim/plugged/YouCompleteMe/install.py`
+
+#### `.vim`
+
+My `.vim` dotfiles are here:
+[github.com/rodtreweek/.vim](https://github.com/rodtreweek/.vim).
+
 
 ### Fonts
 
