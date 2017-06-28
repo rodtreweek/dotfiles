@@ -168,9 +168,6 @@ function lzgit() {
 }
 
 # Git functions
-function gs() {
-  git status
-}
 
 function grso() {
   git remote show origin
@@ -182,6 +179,11 @@ function grau() {
 
 function grv()  {
   git remote -v
+}
+
+# Cycle through subdirs, and do a git pull.
+function gpall() {
+  find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
 }
 
 # tmux
