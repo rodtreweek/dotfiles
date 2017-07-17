@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+if [ -s ~/.bashrc ]; then
+    source ~/.bashrc;
+fi
 
 # Path to the bash it configuration
 export BASH_IT="/Users/rod/.bash_it"
