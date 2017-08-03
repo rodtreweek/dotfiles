@@ -12,7 +12,6 @@ alias plint='puppet-lint'
 # Vagrant aliases
 alias vscp='vaagrant scp'
 alias vsl='vagrant snapshot list'
-alias vst='vagrant snapshot take'
 
 # Tmux aliases
 alias tma='tmux attach -d -t'
@@ -245,3 +244,6 @@ function yval() {
 function cpub() {
   pbcopy < ~/.ssh/id_rsa.pub
 }
+
+# Tom's faster vssh
+# source ~/vagrant_ssh_cache/vssh.sh
