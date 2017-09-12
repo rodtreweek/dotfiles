@@ -1,7 +1,7 @@
 [user]
   name = Rod Treweek
   email = rtreweek@gmail.com
-	signingkey = 0xF3826FFDBFEAFCEB
+  signingkey = 0xF3826FFDBFEAFCEB
 
 [alias]
   co        = checkout
@@ -24,20 +24,20 @@
   ui = auto
 
 [color "branch"]
-current = yellow reverse
-local = yellow
-remote = blue
+  current = yellow reverse
+  local = yellow
+  remote = blue
 
 [color "diff"]
-meta = yellow bold
-frag = magenta bold
-old = white red
-new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = white red
+  new = green bold
 
 [color "status"]
-added = yellow
-changed = black magenta
-untracked = black cyan
+  added = yellow
+  changed = black magenta
+  untracked = black cyan
 
 [core]
   whitespace = trailing-space,space-before-tab
@@ -48,7 +48,7 @@ untracked = black cyan
 
 [commit]
   verbose = true
-	gpgsign = true
+  gpgsign = true
 
 [merge]
   ff = only
@@ -56,4 +56,4 @@ untracked = black cyan
 [fetch]
   prune = true
 [gpg]
-	program = /usr/local/bin/gpg
+  program = /usr/local/bin/gpg
