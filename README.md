@@ -9,9 +9,16 @@ I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](
 
 ### ZSH
 
-1. oh-my-zsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-1. `mkdir ~/src`
-1. `git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k`
+1. oh-my-zsh:
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+```
+mkdir ~/src
+```
+```
+git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
+```
 
 ### Homebrew
 
@@ -20,7 +27,9 @@ I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 1. Get Brew Bundler:
-`homesick cd && brew bundle`
+```
+homesick cd && brew bundle
+```
 
 ### Gems
 
@@ -33,16 +42,24 @@ I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 1. Install plugins: 
-`vim +PlugInstall +qall`
+```
+vim +PlugInstall +qall
+```
 
 ### Homesick
 
 1. Install Homesick with:
-`gem install homesick`
+```
+gem install homesick
+```
 1. Clone this castle with:
-`homesick clone rodtreweek/dotfiles`
+```
+homesick clone rodtreweek/dotfiles
+```
 1. Create the symlinks with:
-`homesick symlink dotfiles`
+```
+homesick symlink dotfiles
+```
 
 ## Colors and Fonts
 
