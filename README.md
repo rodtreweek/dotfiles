@@ -4,7 +4,6 @@
 
 
 I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](https://github.com/technicalpickles/homesick) to manage my dotfiles.
-I also recommend reading [vim-for-humans](https://github.com/vjousse/vim-for-humans-book) if you use vim.
 
 ## Installation
 
@@ -16,10 +15,12 @@ I also recommend reading [vim-for-humans](https://github.com/vjousse/vim-for-hum
 
 ### Homebrew
 
-[Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) for applications.
-
-1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-1. Get Brew Bundler: `homesick cd && brew bundle`
+1. [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) for applications:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+1. Get Brew Bundler:
+`homesick cd && brew bundle`
 
 ### Gems
 
@@ -27,14 +28,21 @@ I also recommend reading [vim-for-humans](https://github.com/vjousse/vim-for-hum
 
 ### Vim plugins
 
-1. [Vim-Plug](https://github.com/junegunn/vim-plug) Install with: `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-1. Install plugins: `vim +PlugInstall +qall`
+1. Install [Vim-Plug](https://github.com/junegunn/vim-plug) with: 
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+1. Install plugins: 
+`vim +PlugInstall +qall`
 
 ### Homesick
 
-1. Install Homesick with `gem install homesick`
-1. Clone this castle with `homesick clone rodtreweek/dotfiles`
-1. Create the symlinks with `homesick symlink dotfiles`
+1. Install Homesick with:
+`gem install homesick`
+1. Clone this castle with:
+`homesick clone rodtreweek/dotfiles`
+1. Create the symlinks with:
+`homesick symlink dotfiles`
 
 ## Colors and Fonts
 
