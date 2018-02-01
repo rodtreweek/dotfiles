@@ -3,31 +3,32 @@
 [![Travis CI](https://travis-ci.org/rodtreweek/dotfiles.svg?branch=master)](https://travis-ci.org/rodtreweek/dotfiles)
 
 
-I use Homesick to manage my dotfiles.
-I also highly recommend that you read this book if you use vim: https://github.com/vjousse/vim-for-humans-book
+I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](https://github.com/technicalpickles/homesick) to manage my dotfiles.
+I also recommend reading [vim-for-humans](https://github.com/vjousse/vim-for-humans-book) if you use vim.
 
 ## Installation
 
+### ZSH
+
+1. oh-my-zsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+1. `mkdir ~/src`
+1. `git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k`
+
 ### Homebrew
 
-1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
-1. Bettervim: `brew install vim --with-override-system-vi`
-1. Other tools: `brew install git tmux thefuck ack the_silver_searcher rg tree nmap xz wget autossh cmake`
-1. Use brew's Ruby: `brew install ruby ruby-build`
-1. Install Xclip: first, `brew cask install xquartz` then: `brew install xclip`
+[Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) for applications.
 
-### bash
+1. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. Get Brew Bundler: `homesick cd && brew bundle`
 
-1. bash_it: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/Bash-it/bash-it/master/install.sh)"`
-1. `mkdir ~/src`
-1. `git clone https://github.com/rodtreweek/powerline-r ~/src/powerline-r`
+### Gems
 
-### Zsh
+1. `gem install tmuxinator rubocop ruby-perl mailcatcher`
 
-oh-my-zsh: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-mkdir ~/src
-git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
+### Vim plugins
 
+1. [Vim-Plug](https://github.com/junegunn/vim-plug) Install with: `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+1. Install plugins: `vim +PlugInstall +qall`
 
 ### Homesick
 
@@ -35,37 +36,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 1. Clone this castle with `homesick clone rodtreweek/dotfiles`
 1. Create the symlinks with `homesick symlink dotfiles`
 
-### Vim plugins
-https://github.com/junegunn/vim-plug
+## Colors and Fonts
 
-1. Vimplug Install: `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-1. Add a vim-plug section to your ~/.vimrc (or ~/.config/nvim/init.vim for Neovim):
-
-Begin the section with call plug#begin()
-List the plugins with Plug commands
-call plug#end() to update &runtimepath and initialize plugin system
-Automatically executes filetype plugin indent on and syntax enable. You can revert the settings after the call. e.g. filetype indent off, syntax off, etc.
-1. Setup YouCompleteMe:
-    1. `brew install cmake`
-    1. `~/.vim/plugged/YouCompleteMe/install.py`
-
-#### .vim
-
-My `.vim` dotfiles are here:
-[github.com/rodtreweek/.vim](https://github.com/rodtreweek/.vim).
-
-
-### Fonts
-
-Install Awesome patched fonts to make vim-airline happy:
-
-1. Download and install an Awesome patched font:
-  * <https://github.com/gabrielelana/awesome-terminal-fonts/raw/patching-strategy/patched/Inconsolata%2BAwesome.ttf>
-2. Switch iTerm2 to use that font for both **Font** and **Non ASCII Font**
-
-### Tests
-
-The tests use [shellcheck](https://github.com/koalaman/shellcheck). You don't
-need to install anything. They run in a container.
-
+1. GruvBox color scheme for iterm2: 
+* <https://github.com/morhetz/gruvbox-contrib/raw/master/iterm2/gruvbox-dark.itermcolors>
+1. Awesome patched fonts:
+* <https://github.com/gabrielelana/awesome-terminal-fonts/raw/patching-strategy/patched/Inconsolata%2BAwesome.ttf>
+1. Switch iTerm2 to use this font for the *Non ASCII Font*
