@@ -19,7 +19,7 @@ mkdir ~/src
 ```
 git clone https://github.com/bhilburn/powerlevel9k.git ~/src/powerlevel9k
 ```
-1. zplug:
+1. [zplug](https://github.com/zplug/zplug):
 ```
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 ```
