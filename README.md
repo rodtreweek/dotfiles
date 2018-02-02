@@ -36,8 +36,6 @@ I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](
 
 ## Colors and Fonts
 
-1. GruvBox color scheme for iterm2: 
-* <https://github.com/morhetz/gruvbox-contrib/raw/master/iterm2/gruvbox-dark.itermcolors>
-1. Awesome patched fonts:
-* <https://github.com/gabrielelana/awesome-terminal-fonts/raw/patching-strategy/patched/Inconsolata%2BAwesome.ttf>
+1. GruvBox color scheme for iterm2: <https://github.com/morhetz/gruvbox-contrib/raw/master/iterm2/gruvbox-dark.itermcolors>
+1. Awesome patched fonts: <https://github.com/gabrielelana/awesome-terminal-fonts/raw/patching-strategy/patched/Inconsolata%2BAwesome.ttf>
 1. Switch iTerm2 to use this font for the *Non ASCII Font*.
