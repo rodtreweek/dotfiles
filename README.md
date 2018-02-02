@@ -21,7 +21,7 @@ I use [Josh Nichols'](https://github.com/technicalpickles) excellent [Homesick](
 
 ### Gems
 
-1. `gem install tmuxinator rubocop ruby-perl mailcatcher`
+`gem install tmuxinator rubocop ruby-perl mailcatcher`
 
 ### Vim plugins
 
