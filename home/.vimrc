@@ -1,24 +1,23 @@
-"Rod Treweek
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " Let vim-plug manage things
 call plug#begin('~/.vim/plugged')
+
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'stephpy/vim-yaml'
-Plug 'dearrrfish/vim-applescript'
 Plug 'gabrielelana/vim-markdown'
 Plug 'morhetz/gruvbox'
 Plug 'godlygeek/tabular'
+Plug 'lifepillar/vim-mucomplete'
 Plug 'PProvost/vim-ps1'
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'voxpupuli/vim-puppet'
+Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-call plug#end()
+Plug 'fatih/vim-go'
+Plug 'davidhalter/jedi-vim'
+Plug 'ekalinin/dockerfile.vim'
+Plug 'docker/docker'
+Plug 'vim-scripts/bash-support.vim'
+Plug 'tpope/vim-commentary'
 
-filetype plugin indent on    " required
+call plug#end()
 
 :so ~/.vimrc.settings

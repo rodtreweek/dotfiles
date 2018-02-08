@@ -1,7 +1,3 @@
-"First, STFU Bells!
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
-
 "  AUTOGROUPS {{{
 
 augroup configgroup
@@ -9,6 +5,7 @@ augroup configgroup
   autocmd BufEnter Rakefile set filetype=ruby
   autocmd BufEnter Vagrantfile set filetype=ruby
   autocmd BufEnter Gemfile set filetype=ruby
+  autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=darkred
 augroup end
 
 " }}}
@@ -31,6 +28,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#buffer_min_count = 2
+let g:airline#extensions#ale#enabled = 1
 let g:airline_skip_empty_sections = 1
 let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
 
@@ -47,7 +45,6 @@ else
 endif
 
 " Git Gutter
-let g:gitgutter_sign_column_always = 1
 highlight GitGutterAdd          ctermbg=235 ctermfg=10
 highlight GitGutterChange       ctermbg=235 ctermfg=208
 highlight GitGutterDelete       ctermbg=235 ctermfg=9
@@ -57,9 +54,20 @@ highlight GitGutterChangeDelete ctermbg=235 ctermfg=175
 let g:ale_lint_on_text_changed = 1
 let g:ale_lint_on_save = 0
 let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_warning = '>>'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
+" MuComplete Options
+set completeopt=menuone,noinsert,noselect
+set shortmess+=c " Turn off completion messages
+inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+let g:mucomplete#enable_auto_at_startup = 1
+
+" PolyGot Settings
+let g:polyglot_disabled = ['puppet']
 
 " }}}
 " {{{ SPACES & TABS
@@ -73,8 +81,12 @@ set softtabstop=2
 set autoindent
 set smartindent
 
- " }}}
+" }}}
 " UI CONFIG {{{
+
+" STFU beeps!
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Enable line numbers
 set number
@@ -91,26 +103,15 @@ set scrolloff=14
 " Visual autocomplete for command menu
 set wildmenu
 
-" Redraw only when we ned to
+" Redraw only when we need to
 set lazyredraw
 
-" highlight matching brackets
+" Highlight matching brackets
 set showmatch
 
 " Hide buffers after they are abandoned. Also allows switching buffers without
 " saving them first.
 set hidden
-
-" Highlight Trailing Whitespace
-highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-match ExtraWhitespace /\s\+$/
-
-" Highlight Literal Tabs
-highlight LiteralTabs ctermbg=darkred guibg=darkred
-match LiteralTabs /	/
-
-" Auto Complete Menu
-set completeopt=longest,menu
 
 " paulrouget vim settings:
 highlight vertsplit       ctermbg=235 ctermfg=239
@@ -122,19 +123,30 @@ highlight Default                     ctermfg=1
 highlight SignColumn      ctermbg=235
 highlight EndOfBuffer     ctermbg=235 ctermfg=235
 
+" New vertical splits go to the right rather than the left
+set splitright
+
+" Always show the sign column
+set signcolumn=yes
+
 " }}}
 " SEARCHING {{{
 
-" Enable highlight search and highlight when searching
+" Enable highlight search and highlight when searching.
 set hlsearch
 set incsearch
+
+" **Note: hlsearch needs to be set first *before* matches will work,
+" since that's the actual function thats used for matching.
+" Make sure any settings that rely on this function are set *after* hlsearch
+" has been set, or they won't work :(
+
+" Show trailing whitespace and spaces before a tab:
+match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Ignore case when searching
 set ignorecase
 set smartcase
-
-" Turn off search highlight with <leader><space>
-nnoremap <leader><space> :nohlsearch<CR>
 
 " }}}
 " FOLDING {{{
@@ -150,7 +162,6 @@ set foldnestmax=10
 
 " space opens/closes folds
 nnoremap <space> za
-
 
 "}}}
 " MOVEMENT {{{
@@ -173,8 +184,18 @@ autocmd BufReadPost *  if line("'\"") > 1 && line("'\"") <= line("$")
 " }}}
 " SHORTCUTS {{{
 
-" Clear whitespace at end of line with '_$'
-nmap _$ :call Preserve("%s/\\s\\+$//e")<CR>
+" Clear whitespace at end of line with '_$' " Pretty sure I had this working on Mac...Not working on WSL/CentOS.
+" nmap _$ :call Preserve("%s/\\s\\+$//e")<CR> " -- Not working on WSL/CentOS.
+
+" Since I wasn't able to get the above mapping to work, I discovered that with
+" the following a user can press F5 to delete all trailing whitespace. 
+" The variable _s is used to save and restore the last search pattern register
+" (so next time the user presses n they will continue their last search),
+" and :nohl is used to switch off search highlighting (so trailing spaces will 
+" not be highlighted while the user types). The e flag is used in the substitute
+" command so no error is shown if trailing whitespace is not found. Unlike before, 
+" the substitution text must be specified in order to use the required flag.
+nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Quote words and lines with \q', \q", \qd
 :nnoremap <Leader>q" ciw""<Esc>P
@@ -230,11 +251,18 @@ endfunction
 :nnoremap <Tab> :bnext<CR>
 :nnoremap <S-Tab> :bprevious<CR>
 
+" Never do this again --> :set paste <ctrl-v> :set no paste
+" Note: while I was pretty sure I had the below "let" options
+" working on my Mac, they aren't working for me in either
+" WSL, or CentOS. In any case, the below F2 toggle approach
+" is working fine for me.
+" let &t_SI .= "\<Esc>[?2004h" " -- Not working in WSL/CentOS.
+" let &t_EI .= "\<Esc>[?2004l" " -- Not working in WSL/CentOS.
+
+" Use F2 to toggle set paste:
+set pastetoggle=<F2>
+
 " }}}
 
 set modelines=1
 " vim:foldmethod=marker:foldlevel=0
-
-" Never do this again --> :set paste <ctrl-v> :set no paste
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
