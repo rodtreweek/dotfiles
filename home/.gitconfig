@@ -1,7 +1,7 @@
 [user]
   name = Rod Treweek
   email = rtreweek@gmail.com
-	signingkey = 6C88A4DA
+	signingkey = FDA629326C88A4DA
 
 [alias]
   co        = checkout
@@ -48,7 +48,7 @@
 
 [commit]
   verbose = true
-	; gpgsign = true
+	gpgsign = true
 
 [merge]
   ff = only
@@ -56,4 +56,4 @@
 [fetch]
   prune = true
 [gpg]
-  program = /usr/local/bin/gpg
+	program = gpg

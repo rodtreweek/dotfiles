@@ -16,7 +16,6 @@ Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'wolfgangmehner/vim-plugins'
 Plug 'tpope/vim-commentary'
-Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 
 call plug#end()
 
