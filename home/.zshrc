@@ -40,7 +40,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon ssh root_indicator dir dir_writable vcs)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time  status  time)
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# Uncomment the following line to display red dots while waiting for completion.
 COMPLETION_WAITING_DOTS=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
