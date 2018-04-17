@@ -48,6 +48,7 @@ COMPLETION_WAITING_DOTS=true
 plugins=(k tig gitfast colorize colored-man-pages osx ruby rbenv gem vagrant ssh-agent tmux fast-syntax-highlighting zsh-completions zsh-autosuggestions extract docker docker-compose)
 autoload -U compinit && compinit
 
+# bindkey for zsh-autosuggestions
 bindkey '**' autosuggest-accept
 
 # Color correct paths rather than underlining them.
