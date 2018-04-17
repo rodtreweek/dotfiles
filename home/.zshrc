@@ -45,9 +45,10 @@ COMPLETION_WAITING_DOTS=true
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(gitfast colorize colored-man-pages osx ruby rbenv gem vagrant ssh-agent tmux fast-syntax-highlighting zsh-completions zsh-autosuggestions extract docker docker-compose)
+plugins=(k tig gitfast colorize colored-man-pages osx ruby rbenv gem vagrant ssh-agent tmux fast-syntax-highlighting zsh-completions zsh-autosuggestions extract docker docker-compose)
 autoload -U compinit && compinit
 
+bindkey '**' autosuggest-accept
 # Color correct paths rather than underlining them.
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
@@ -80,6 +81,7 @@ fi
 # Load plugin files
 zplug 'supercrabtree/k'
 zplug 'zdharma/fast-syntax-highlighting'
+zplug "felixr/docker-zsh-completion"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

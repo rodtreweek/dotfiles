@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'gabrielelana/vim-markdown'
+Plug 'klen/python-mode'
+Plug 'plasticboy/vim-markdown'
 Plug 'morhetz/gruvbox'
 Plug 'godlygeek/tabular'
 Plug 'lifepillar/vim-mucomplete'
@@ -13,10 +14,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
-Plug 'ekalinin/dockerfile.vim'
-Plug 'docker/docker'
-Plug 'vim-scripts/bash-support.vim'
+Plug 'wolfgangmehner/vim-plugins'
 Plug 'tpope/vim-commentary'
+Plug 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 
 call plug#end()
 
