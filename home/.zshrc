@@ -49,6 +49,7 @@ plugins=(k tig gitfast colorize colored-man-pages osx ruby rbenv gem vagrant ssh
 autoload -U compinit && compinit
 
 bindkey '**' autosuggest-accept
+
 # Color correct paths rather than underlining them.
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
